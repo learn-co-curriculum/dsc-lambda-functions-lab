@@ -96,18 +96,6 @@ Do this with a single line of code!
 
 
 ```python
-df.text.map(lambda x: len(x.split())).mean()
-```
-
-
-
-
-    77.06551724137931
-
-
-
-
-```python
 # Your code here
 ```
 
@@ -134,10 +122,15 @@ def rewrite_as_lambda(value):
 
 
 ```python
-df['Review_length'] = df['Review_num_words'].map(lambda x: 'Short' if x < 50 else ('Medium' if x < 80 else 'Long'))
+#Your code here
 ```
 
 # Level Up: Dates Adavanced!
 <img src="date_format_map.png" width=500>  
 
 Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-MM-YYYY. Try to do this using a lambda function.
+
+
+```python
+#Your code here
+```
