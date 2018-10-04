@@ -1,4 +1,15 @@
 
+# Lambda Functions - Lab
+
+## Introduction|
+
+In this lab, you'll get some hands on practice creating and using lambda functions.
+
+## Objectives
+You will be able to:
+* Understand what lambda functions are and why they are useful
+* Use lambda functions to transform data within lists and DataFrames
+
 ## Lambda Functions
 
 
@@ -134,3 +145,7 @@ Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-
 ```python
 #Your code here
 ```
+
+## Summary
+
+Great! Hopefully you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone elses code that happens to use lambdas.
