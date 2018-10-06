@@ -122,7 +122,7 @@ Do this with a single line of code!
 
 ```python
 def rewrite_as_lambda(value):
-    if len(value) > 50:
+    if len(value) < 50:
         return 'Short'
     elif len(value) < 80:
         return 'Medium'
