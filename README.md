@@ -12,17 +12,17 @@ df.head(2)
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -88,17 +88,17 @@ df.head(2)
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -158,17 +158,17 @@ Select the month from the date string using a lambda function.
 
 
 ```python
-df.date.map(lambda x: x[-2:]).head()
+df.date.map(lambda x: x[3:5]).head()
 ```
 
 
 
 
-    0    13
-    1    23
-    2    05
-    3    25
-    4    15
+    0    11
+    1    10
+    2    09
+    3    02
+    4    06
     Name: date, dtype: object
 
 
@@ -205,17 +205,17 @@ df.head(2)
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -346,8 +346,3 @@ df.date.head()
     Name: date, dtype: object
 
 
-
-
-```python
-
-```
