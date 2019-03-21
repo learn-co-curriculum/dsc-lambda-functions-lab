@@ -1,7 +1,7 @@
 
 # Lambda Functions - Lab
 
-## Introduction|
+## Introduction
 
 In this lab, you'll get some hands on practice creating and using lambda functions.
 
@@ -85,7 +85,7 @@ df.head(2)
 
 
 
-# Simple Arithmetic
+## Simple Arithmetic
 
 Use a lambda function to create a new column called 'stars_squared' by squarring the stars column.
 
@@ -94,7 +94,7 @@ Use a lambda function to create a new column called 'stars_squared' by squarring
 #Your code here
 ```
 
-# Dates
+## Dates
 Select the month from the date string using a lambda function.
 
 
@@ -102,7 +102,7 @@ Select the month from the date string using a lambda function.
 # Your code here
 ```
 
-# What is the average number of words for a yelp review?
+## What is the average number of words for a yelp review?
 Do this with a single line of code!
 
 
@@ -110,7 +110,7 @@ Do this with a single line of code!
 # Your code here
 ```
 
-# Create a new column for the number of words in the review.
+## Create a new column for the number of words in the review.
 
 
 ```python
@@ -136,8 +136,8 @@ def rewrite_as_lambda(value):
 #Your code here
 ```
 
-# Level Up: Dates Adavanced!
-<img src="date_format_map.png" width=500>  
+## Level Up: Dates Advanced!
+<img src="images/date_format_map.png" width="600">  
 
 Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-MM-YYYY. Try to do this using a lambda function.
 
