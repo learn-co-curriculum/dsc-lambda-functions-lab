@@ -117,7 +117,7 @@ Do this with a single line of code!
 #Your code here
 ```
 
-## Rewrite the following as a lamda function. Create a new column 'Review_Length'
+## Rewrite the following as a lambda function. Create a new column 'Review_Length'
 
 
 ```python
@@ -148,4 +148,4 @@ Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-
 
 ## Summary
 
-Great! Hopefully you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone elses code that happens to use lambdas.
+Great! Hopefully you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone else's code that happens to use lambdas.
