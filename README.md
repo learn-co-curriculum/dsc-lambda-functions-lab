@@ -1,4 +1,18 @@
 
+# Lambda Functions - Lab
+
+## Introduction
+In this lab, you'll get some hands on practice creating and using lambda functions.
+
+
+## Objectives
+
+You will be able to:
+
+- Understand what lambda functions are and why they are useful
+- Use lambda functions to transform data within lists and DataFrames
+
+
 ## Lambda Functions
 
 
@@ -74,7 +88,7 @@ df.head(2)
 
 
 
-# Simple Arithmetic
+## Simple Arithmetic
 
 Use a lambda function to create a new column called 'stars_squared' by squarring the stars column.
 
@@ -153,7 +167,7 @@ df.head(2)
 
 
 
-# Dates
+## Dates
 Select the month from the date string using a lambda function.
 
 
@@ -173,7 +187,7 @@ df.date.map(lambda x: x[3:5]).head()
 
 
 
-# What is the average number of words for a yelp review?
+## What is the average number of words for a yelp review?
 Do this with a single line of code!
 
 
@@ -188,12 +202,7 @@ df.text.map(lambda x: len(x.split())).mean()
 
 
 
-
-```python
-# Your code here
-```
-
-# Create a new column for the number of words in the review.
+## Create a new column for the number of words in the review.
 
 
 ```python
@@ -303,8 +312,8 @@ df.Review_length.value_counts(normalize=True)
 
 
 
-# Level Up: Dates Adavanced!
-<img src="date_format_map.png" width=500>  
+## Level Up: Dates Advanced!
+<img src="images/date_format_map.png" width="600">  
 
 Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-MM-YYYY. Try to do this using a lambda function.
 
@@ -346,3 +355,7 @@ df.date.head()
     Name: date, dtype: object
 
 
+
+## Summary
+
+Great! Hopefully you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone elses code that happens to use lambdas.
