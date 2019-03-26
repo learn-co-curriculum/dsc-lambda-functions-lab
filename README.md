@@ -1,6 +1,8 @@
 
 # Lambda Functions - Lab
 
+<!-- introduction -->
+
 ## Introduction
 
 In this lab, you'll get some hands on practice creating and using lambda functions.
