@@ -1,4 +1,3 @@
-
 # Lambda Functions - Lab
 
 Explanation of content.
