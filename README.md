@@ -1,7 +1,7 @@
 
 # Lambda Functions - Lab
 
-<!-- introduction -->
+- Explanation of content
 
 ## Introduction
 
