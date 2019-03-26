@@ -1,7 +1,7 @@
 
 # Lambda Functions - Lab
 
-- Explanation of content
+Explanation of content.
 
 ## Introduction
 
