@@ -172,7 +172,7 @@ Select the month from the date string using a lambda function.
 
 
 ```python
-df.date.map(lambda x: x[3:5]).head()
+df.date.map(lambda x: x[5:7]).head()
 ```
 
 
