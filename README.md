@@ -313,7 +313,7 @@ df.Review_length.value_counts(normalize=True)
 
 
 ## Level Up: Dates Advanced!
-<img src="images/date_format_map.png" width="600">  
+<img src="images/world_map.png" width="600">  
 
 Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-MM-YYYY. Try to do this using a lambda function.
 
