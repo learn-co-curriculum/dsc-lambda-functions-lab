@@ -2,16 +2,13 @@
 # Lambda Functions - Lab
 
 ## Introduction
+
 In this lab, you'll get some hands on practice creating and using lambda functions.
 
-
 ## Objectives
-
 You will be able to:
-
-- Understand what lambda functions are and why they are useful
-- Use lambda functions to transform data within lists and DataFrames
-
+* Understand what lambda functions are and why they are useful
+* Use lambda functions to transform data within lists and DataFrames
 
 ## Lambda Functions
 
