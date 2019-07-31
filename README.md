@@ -131,15 +131,15 @@ def rewrite_as_lambda(value):
 #Hint: nest your if, else conditionals
 ```
 
-
-```python
-#Your code here
-```
-
 ## Level Up: Dates Advanced!
 <img src="images/world_map.png" width="600">  
 
 Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-MM-YYYY. Try to do this using a lambda function.
+
+
+```python
+#Your code here
+```
 
 
 ```python
