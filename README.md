@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you'll get some hands on practice creating and using lambda functions.
+In this lab, you'll get some hands-on practice creating and using lambda functions.
 
 ## Objectives
 You will be able to:
@@ -161,7 +161,7 @@ df.head(2)
 
 ## Simple Arithmetic
 
-Use a lambda function to create a new column called 'stars_squared' by squarring the stars column.
+Use a lambda function to create a new column called 'stars_squared' by squaring the stars column.
 
 
 ```python
@@ -480,4 +480,4 @@ df.date.head()
 
 ## Summary
 
-Great! Hopefully you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone else's code that happens to use lambdas.
+Great! Hopefully, you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone else's code that happens to use lambdas.
