@@ -6,16 +6,16 @@
 In this lab, you'll get some hands-on practice creating and using lambda functions.
 
 ## Objectives
-You will be able to:
-* Understand what lambda functions are and why they are useful
-* Use lambda functions to transform data within lists and DataFrames
+In this lab you will: 
+* Create lambda functions to use as arguments of other functions   
+* Use the `.map()` or `.apply()` method to apply a function to a pandas series or DataFrame
 
 ## Lambda Functions
 
 
 ```python
 import pandas as pd
-df = pd.read_csv('Yelp_Reviews.csv')
+df = pd.read_csv('Yelp_Reviews.csv', index_col=0)
 df.head(2)
 ```
 
@@ -40,7 +40,6 @@ df.head(2)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>business_id</th>
       <th>cool</th>
       <th>date</th>
@@ -54,8 +53,7 @@ df.head(2)
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>1</td>
+      <th>1</th>
       <td>pomGBqfbxcqPv14c3XH-ZQ</td>
       <td>0</td>
       <td>2012-11-13</td>
@@ -67,8 +65,7 @@ df.head(2)
       <td>msQe1u7Z_XuqjGoqhB0J5g</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>2</td>
+      <th>2</th>
       <td>jtQARsP6P-LbkyjbO1qNGg</td>
       <td>1</td>
       <td>2014-10-23</td>
@@ -85,13 +82,13 @@ df.head(2)
 
 
 
-## Simple Arithmetic
+## Simple arithmetic
 
-Use a lambda function to create a new column called 'stars_squared' by squaring the stars column.
+Use a lambda function to create a new column called `'stars_squared'` by squaring the stars column.
 
 
 ```python
-df['stars_squared'] = df.stars.map(lambda x: x**2)
+df['stars_squared'] = df['stars'].map(lambda x: x**2)
 df.head(2)
 ```
 
@@ -116,7 +113,6 @@ df.head(2)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>business_id</th>
       <th>cool</th>
       <th>date</th>
@@ -131,8 +127,7 @@ df.head(2)
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>1</td>
+      <th>1</th>
       <td>pomGBqfbxcqPv14c3XH-ZQ</td>
       <td>0</td>
       <td>2012-11-13</td>
@@ -145,8 +140,7 @@ df.head(2)
       <td>25</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>2</td>
+      <th>2</th>
       <td>jtQARsP6P-LbkyjbO1qNGg</td>
       <td>1</td>
       <td>2014-10-23</td>
@@ -169,17 +163,17 @@ Select the month from the date string using a lambda function.
 
 
 ```python
-df.date.map(lambda x: x[5:7]).head()
+df['date'].map(lambda x: x[5:7]).head()
 ```
 
 
 
 
-    0    11
-    1    10
-    2    09
-    3    02
-    4    06
+    1     11
+    2     10
+    4     09
+    5     02
+    10    06
     Name: date, dtype: object
 
 
@@ -189,7 +183,7 @@ Do this with a single line of code!
 
 
 ```python
-df.text.map(lambda x: len(x.split())).mean()
+df['text'].map(lambda x: len(x.split())).mean()
 ```
 
 
@@ -199,11 +193,11 @@ df.text.map(lambda x: len(x.split())).mean()
 
 
 
-## Create a new column for the number of words in the review.
+## Create a new column for the number of words in the review
 
 
 ```python
-df['Review_num_words'] = df.text.map(lambda x: len(x.split()))
+df['Review_num_words'] = df['text'].map(lambda x: len(x.split()))
 df.head(2)
 ```
 
@@ -228,7 +222,6 @@ df.head(2)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>business_id</th>
       <th>cool</th>
       <th>date</th>
@@ -244,8 +237,7 @@ df.head(2)
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>1</td>
+      <th>1</th>
       <td>pomGBqfbxcqPv14c3XH-ZQ</td>
       <td>0</td>
       <td>2012-11-13</td>
@@ -259,8 +251,7 @@ df.head(2)
       <td>58</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>2</td>
+      <th>2</th>
       <td>jtQARsP6P-LbkyjbO1qNGg</td>
       <td>1</td>
       <td>2014-10-23</td>
@@ -279,10 +270,13 @@ df.head(2)
 
 
 
-## Rewrite the following as a lambda function. Create a new column 'Review_Length'
+## Rewrite the following as a lambda function
+
+Create a new column `'Review_Length'` by applying this lambda function to the `'Review_num_words'` column. 
 
 
 ```python
+# Rewrite the following function as a lambda function
 def rewrite_as_lambda(value):
     if len(value) > 50:
         return 'Short'
@@ -290,13 +284,10 @@ def rewrite_as_lambda(value):
         return 'Medium'
     else:
         return 'Long'
-#Hint: nest your if, else conditionals
-```
+# Hint: nest your if, else conditionals
 
-
-```python
 df['Review_length'] = df['Review_num_words'].map(lambda x: 'Short' if x < 50 else ('Medium' if x < 80 else 'Long'))
-df.Review_length.value_counts(normalize=True)
+df['Review_length'].value_counts(normalize=True)
 ```
 
 
@@ -312,43 +303,41 @@ df.Review_length.value_counts(normalize=True)
 ## Level Up: Dates Advanced!
 <img src="images/world_map.png" width="600">  
 
-Overwrite the date column by reordering the month and day from YYYY-MM-DD to DD-MM-YYYY. Try to do this using a lambda function.
+Print the first five rows of the `'date'` column. 
 
 
 ```python
-df.date.head()
+df['date'].head()
 ```
 
 
 
 
-    0    2012-11-13
-    1    2014-10-23
-    2    2014-09-05
-    3    2011-02-25
-    4    2016-06-15
+    1     2012-11-13
+    2     2014-10-23
+    4     2014-09-05
+    5     2011-02-25
+    10    2016-06-15
     Name: date, dtype: object
 
 
 
-
-```python
-df.date = df.date.map(lambda x: '{}-{}-{}'.format(x[-2:], x[5:7], x[:4]))
-```
+Overwrite the `'date'` column by reordering the month and day from `YYYY-MM-DD` to `DD-MM-YYYY`. Try to do this using a lambda function.
 
 
 ```python
-df.date.head()
+df['date'] = df['date'].map(lambda x: '{}-{}-{}'.format(x[-2:], x[5:7], x[:4]))
+df['date'].head()
 ```
 
 
 
 
-    0    13-11-2012
-    1    23-10-2014
-    2    05-09-2014
-    3    25-02-2011
-    4    15-06-2016
+    1     13-11-2012
+    2     23-10-2014
+    4     05-09-2014
+    5     25-02-2011
+    10    15-06-2016
     Name: date, dtype: object
 
 
