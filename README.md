@@ -202,7 +202,7 @@ df['date'].map(lambda x: x[5:7]).head()
 
 
 ## What is the average number of words for a yelp review?
-Do this with a single line of code!
+Do this with a single line of code.
 
 
 ```python
@@ -354,7 +354,7 @@ df['Review_length'].value_counts(normalize=True)
 
 
 
-## Level Up: Dates Advanced!
+## Level Up: Dates Advanced
 <img src="images/world_map.png" width="600">  
 
 Print the first five rows of the `'date'` column. 
@@ -412,4 +412,4 @@ df['date'].head()
 
 ## Summary
 
-Great! Hopefully, you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone else's code that happens to use lambdas.
+Hopefully, you're getting the hang of lambda functions now! It's important not to overuse them - it will often make more sense to define a function so that it's reusable elsewhere. But whenever you need to quickly apply some simple processing to a collection of data you have a new technique that will help you to do just that. It'll also be useful if you're reading someone else's code that happens to use lambdas.
